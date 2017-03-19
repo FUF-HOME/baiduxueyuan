@@ -5,7 +5,12 @@
     <title>IFE JavaScript Task 01</title>
   </head>
 <body>
+<style type="text/css">
+li{
+  list-style: none;
+}
 
+</style>
   <h3>污染城市列表</h3>
   <ul id="aqi-list">
 <!--   
@@ -31,6 +36,31 @@ var aqiData = [
   遍历读取aqiData中各个城市的数据
   将空气质量指数大于60的城市显示到aqi-list的列表中
   */
+
+ for (var i = 0; i < aqiData.length; i++) {
+   // console.log(aqiData[i][1]);
+ 
+if ( aqiData[i][1]>60){
+
+const city=aqiData[i];
+citys="<li>"+city+"</li>"+"<br>"
+document.write(citys);
+console.log(citys);
+
+}
+}
+
+
+
+
+// aqiData.forEach(aqiData => {
+
+//   aqiData="<li > "+aqiData+"</li>"+"<br>"
+// document.write(aqiData);
+
+
+// });
+
 
 })();
 
